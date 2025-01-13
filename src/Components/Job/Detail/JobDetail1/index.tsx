@@ -1,7 +1,7 @@
 "use client";
 import { Fragment } from "react";
 import JobDetailBreadCrumb from "../../Common/JobDetailBreadCrumb";
-import JobDetail from "@/Components/Property/Common/PropertyDetail/JobDetail";
+import JobDetail from "@/Components/CommonComponents/ProductDetail/JobDetail";
 
 const JobDetail1Container = () => {
   return (

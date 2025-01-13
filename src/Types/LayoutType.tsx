@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 export interface MenuItemtype {
   title?: string;
   children?: MenuItemtype[];
@@ -15,8 +17,6 @@ export interface MenuListType {
   menu: MenuItemtype[] | undefined;
   level: number;
 }
-
- 
 
 export interface MainMenu {
   mainMenu:MenuItemtype[]

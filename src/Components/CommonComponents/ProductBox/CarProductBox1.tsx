@@ -67,7 +67,7 @@ const CarProductBox1: React.FC<ProductCardType> = ({ data, gridType, view, wishl
         {gridType === "list-view" && <p className='featured-detail'>{data.description}</p>}
         <p>{data.emi}</p>
         <ul className='featured-list'>
-          {data.features.map((item, index) => (
+          {data.features.slice(0,3).map((item, index) => (
             <li key={index}>
               <Image height={16} width={16} src={`${SVGPath}/${item.icon}`} alt='profile-2user' className='img-fluid' />
               <span>{item.text}</span>

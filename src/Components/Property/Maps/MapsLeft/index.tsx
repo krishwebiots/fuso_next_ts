@@ -3,9 +3,9 @@ import { useAppDispatch } from "@/Redux/Hooks";
 import { setCardToShow } from "@/Redux/Layout/LayoutReducers";
 import { fetchCategoryApiData, fetchProductApiData } from "@/Redux/Reducers/ProductReducers";
 import React, { Fragment, useEffect } from "react";
-import TopFilter from "../../Common/TopFilter";
-import PropertyBreadCrumb from "../../Common/PropertyBreadCrumb";
-import GridView from "../../Common/GridView";
+import TopFilter from "../../../CommonComponents/TopFilter";
+import PropertyBreadCrumb from "../../../CommonComponents/PropertyBreadCrumb";
+import GridView from "@/Components/CommonComponents/GridView";
 
 const MapsLeftContainer = () => {
   

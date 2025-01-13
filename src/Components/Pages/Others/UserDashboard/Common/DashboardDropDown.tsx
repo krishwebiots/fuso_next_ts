@@ -1,42 +1,29 @@
+import { Href } from "@/Constants/Constants";
 import { DashboardDropdownProps } from "@/Types/OtherType";
-import React, { FC, useState } from "react";
-import { Button, Dropdown, DropdownMenu, DropdownToggle } from "reactstrap";
+import UseOutsideDropdown from "@/utils/UseOutsideDropdown";
+import { FC, useState } from "react";
+import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Input } from "reactstrap";
 
-const DashboardDropDown: FC<DashboardDropdownProps> = ({ options, label, onSelect }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [selectedOption, setSelectedOption] = useState<string>("");
+const DashboardDropDown: FC<DashboardDropdownProps> = ({ options, label, placeholder }) => {
+  const { ref, isComponentVisible, setIsComponentVisible } = UseOutsideDropdown(false);
+  const [selected, setSelected] = useState(placeholder);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleSelect = (option: string) => {
-    setSelectedOption(option);
-    onSelect(option);
-    setIsOpen(false);
+    setIsComponentVisible(!isComponentVisible);
   };
 
   return (
-    <div className='form-input'>
+    <div ref={ref} className='form-input'>
       <label>{label}</label>
-      <Dropdown className='select-dropdown'>
-        <DropdownToggle color="secondary" onClick={toggleDropdown}  >
-          {selectedOption || "Select an Option"}
+      <Dropdown className='select-dropdown' isOpen={isComponentVisible} toggle={toggleDropdown}>
+        <DropdownToggle className='select-button' onClick={toggleDropdown}>
+          <Input type='text' placeholder={selected} />
         </DropdownToggle>
-        <DropdownMenu className={`${isOpen ? "show" : ""}`} aria-labelledby='dropdownMenuButton'>
+        <DropdownMenu className='select-menu'>
           {options.map((option, index) => (
-            <li key={index}>
-              <a
-                className='dropdown-item'
-                href='#'
-                onClick={(e) => {
-                  e.preventDefault(); // Prevent page reload
-                  handleSelect(option); // Handle option selection
-                }}
-              >
-                {option}
-              </a>
-            </li>
+            <DropdownItem className='select-item' key={index} href={Href} onClick={() => setSelected(option)}>
+              {option}
+            </DropdownItem>
           ))}
         </DropdownMenu>
       </Dropdown>

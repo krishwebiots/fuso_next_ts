@@ -1,4 +1,4 @@
-import RangeInputFields from "@/Components/Property/Common/GridView/Filter/Common/RangeInputFields";
+import RangeInputFields from "@/Components/CommonComponents/GridView/Filter/Common/RangeInputFields";
 import { GifPath, Search } from "@/Constants/Constants";
 import { HomeTabData } from "@/Data/Demo/Common";
 import { HomeNavData } from "@/Data/Demo/Demo1";
@@ -111,7 +111,7 @@ const SearchTabList: FC<SearchTabListType> = ({ showTab, datePicker, scrollDown,
             </li>
             {scrollDown && (
               <li className='scroll-down tab-item'>
-                <Image width={83} height={99} src={`${GifPath}/mouse-animation.gif`} alt='mouse-animation' className='img-fluid' />
+                <Image width={83} height={99} src={`${GifPath}/mouse-animation.gif`} unoptimized alt='mouse-animation' className='img-fluid' />
               </li>
             )}
           </ul>

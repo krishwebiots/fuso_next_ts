@@ -1,4 +1,4 @@
-import Pagination from "@/Components/Property/Common/GridView/Filter/Pagination";
+import Pagination from "@/Components/CommonComponents/GridView/Filter/Pagination";
 import { Href, ImagePath, PortfolioTitle } from "@/Constants/Constants";
 import { PortfolioBoxSlider, portfolioItems } from "@/Data/Pages/Portfolio";
 import { useAppDispatch, useAppSelector } from "@/Redux/Hooks";

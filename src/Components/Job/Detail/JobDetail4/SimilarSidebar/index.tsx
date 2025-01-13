@@ -1,4 +1,4 @@
-import SimilarJobs from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/SimilarJobs";
+import SimilarJobs from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/SimilarJobs";
 import { SimilarJobsData } from "@/Data/Job";
 import { useAppSelector } from "@/Redux/Hooks";
 import React, { Fragment } from "react";

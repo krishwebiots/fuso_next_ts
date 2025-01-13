@@ -1,5 +1,5 @@
 import Breadcrumbs from "@/Components/CommonComponents/BreadCrumb";
-import GridView from "@/Components/Property/Common/GridView";
+import GridView from "@/Components/CommonComponents/GridView";
 import { RouteList } from "@/utils/RouteList";
 import { Fragment } from "react";
 

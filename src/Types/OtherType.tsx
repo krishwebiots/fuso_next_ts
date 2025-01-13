@@ -6,25 +6,53 @@ export type ContactFormInputs = {
   number: number | string;
 };
 
-type TabItem = {
-  image: string;
-  title: string;
-  reference: string;
-  model: string;
-  price: string;
-};
-
-type Tab = {
-  items: TabItem[];
-};
-
-type TabsData = {
-  tabs: Tab[]; // Array of Tab objects
-};
-
+ 
 export interface DashboardDropdownProps {
   label: string;                  
-  options: string[];            
-  selectedValue?: string;         
-  onSelect: (value: string) => void; 
+  options: string[];              
+  placeholder?: string;
+}
+
+
+interface InfoItem {
+  label: string;
+  value: string;
+  isLink?: boolean;
+}
+
+export interface ProfileCardProps {
+  title: string;
+  data: InfoItem[];
+  modalId: number;
+}
+
+export interface SwitchItemProps {
+  title: string;
+  description: string;
+  checked?: boolean;
+}
+
+export interface PrivacyPolicySubItem {
+  title?: string;
+  content: string;
+}
+
+export interface PrivacyPolicyItem {
+  id: string;
+  title: string;
+  content?: string;
+  subsections?: boolean;
+  subList?: PrivacyPolicySubItem[];
+}
+
+export interface PrivacyNavItem {
+  id?: string;
+  title?: string;
+  subList?: PrivacyNavItem[];
+}
+
+export interface ScrollspyType {
+  title?: string;
+  list?: PrivacyNavItem[];
+  content?: PrivacyPolicyItem[];
 }

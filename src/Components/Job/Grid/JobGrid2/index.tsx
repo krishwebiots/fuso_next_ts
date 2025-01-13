@@ -1,7 +1,7 @@
 'use client';
 import React, { Fragment } from 'react'
 import JobBreadCrumb from '../../Common/JobBreadCrumb';
-import GridView from '@/Components/Property/Common/GridView';
+import GridView from "@/Components/CommonComponents/GridView";
 import { RouteList } from '@/utils/RouteList';
 import { JobTitle } from '@/Constants/Constants';
 

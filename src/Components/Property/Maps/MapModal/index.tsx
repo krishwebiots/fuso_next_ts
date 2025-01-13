@@ -1,9 +1,9 @@
 "use client";
 import { Fragment } from "react";
-import GridView from "../../Common/GridView";
-import MapModal from "../../Common/GridView/Filter/MapModal";
-import PropertyBreadCrumb from "../../Common/PropertyBreadCrumb";
-import TopFilter from "../../Common/TopFilter";
+import GridView from "@/Components/CommonComponents/GridView";
+import PropertyBreadCrumb from "../../../CommonComponents/PropertyBreadCrumb";
+import TopFilter from "../../../CommonComponents/TopFilter";
+import MapModal from "@/Components/CommonComponents/GridView/Filter/MapModal";
 const MapModalContainer = () => {
    
   return (

@@ -18,3 +18,9 @@ export interface PortfolioType {
     rightside?: boolean;
     darkmode?:boolean;
   }
+
+  export interface PortfolioModernType {
+    left: number;
+    top: number;
+    index: number | null;
+  }

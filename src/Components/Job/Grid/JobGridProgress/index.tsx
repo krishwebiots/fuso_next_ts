@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 import { RouteList } from '@/utils/RouteList'
 import { JobTitle } from '@/Constants/Constants'
-import GridView from '@/Components/Property/Common/GridView';
+import GridView from "@/Components/CommonComponents/GridView";
 import JobBreadCrumb from '../../Common/JobBreadCrumb';
 
 const JobGridProgressContainer = () => {

@@ -1,5 +1,5 @@
 "use client";
-import PropertyDetail from "../../Common/PropertyDetail/PropertyDetail";
+import PropertyDetail from "../../../CommonComponents/ProductDetail/PropertyDetail";
 
 const PropertyTabContainer = () => {
   return <PropertyDetail type='tabs' />;

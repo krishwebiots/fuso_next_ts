@@ -16,7 +16,7 @@ const Loading: React.FC<PathTypes> = () => {
 
   const loaderContent = Loaders[loaderKey || ""]?.svg || (
     <Fragment>
-      <Image src={`${GifPath}/${Loaders[loaderKey || ""]?.src || "car1-loader.gif"}`} height={Loaders[loaderKey || ""]?.height || 47} width={Loaders[loaderKey || ""]?.width || 150} alt='loader' className='img-fluid' />
+      <Image src={`${GifPath}/${Loaders[loaderKey || ""]?.src || "car1-loader.gif"}`} priority height={Loaders[loaderKey || ""]?.height || 47} width={Loaders[loaderKey || ""]?.width || 150} alt='loader' className='img-fluid' />
       <h4>{Loaders[loaderKey || ""]?.text || "Loading Car rental Template. Please wait…"}</h4>
     </Fragment>
   );

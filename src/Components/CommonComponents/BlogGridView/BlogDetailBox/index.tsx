@@ -1,4 +1,4 @@
-import Pagination from "@/Components/Property/Common/GridView/Filter/Pagination";
+import Pagination from "@/Components/CommonComponents/GridView/Filter/Pagination";
 import { BlogData } from "@/Data/Pages";
 import { useAppDispatch, useAppSelector } from "@/Redux/Hooks";
 import { setCardToShow } from "@/Redux/Layout/LayoutReducers";

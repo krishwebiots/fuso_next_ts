@@ -1,6 +1,6 @@
 "use client";
 import { Fragment } from "react";
-import PropertyDetail from "../../Common/PropertyDetail/PropertyDetail";
+import PropertyDetail from "../../../CommonComponents/ProductDetail/PropertyDetail";
 
 const PropertyVideoContainer = () => {
   return (

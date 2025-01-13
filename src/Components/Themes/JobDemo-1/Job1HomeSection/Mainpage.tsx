@@ -7,9 +7,9 @@ import CountUp from "react-countup";
 import { Col, Row } from "reactstrap";
 
 const Mainpage = () => {
-  const renderImage: React.FC<JobHomeType> = (imageData, key) => {
+  const renderImage = (imageData: JobHomeType) => {
     const src = imageData.type === "svg" ? `${SVGPath}/${imageData.image}` : `${ImagePath}/${imageData.image}`;
-    return <RatioImage key={key} src={src} alt={imageData.image} className={`img-fluid ${imageData.class || ""}`} />;
+    return <RatioImage src={src} alt={imageData.image} className={`img-fluid ${imageData.class || ""}`} />;
   };
   return (
     <div className='home-block-space'>
@@ -44,16 +44,16 @@ const Mainpage = () => {
                       if ("childrenClass" in imgData) {
                         return (
                           <div key={imgIndex} className={imgData.childrenClass}>
-                            {imgData.childrenImage.map((childImg, childIndex) => renderImage(childImg, childIndex))}
+                            {imgData.childrenImage.map((childImg, childIndex) => renderImage(childImg))}
                           </div>
                         );
                       }
-                      return renderImage(imgData, imgIndex);
+                      return renderImage(imgData);
                     })}
                   </div>
                 );
               }
-              return renderImage(item, index);
+              return renderImage(item);
             })}
           </div>
         </Col>

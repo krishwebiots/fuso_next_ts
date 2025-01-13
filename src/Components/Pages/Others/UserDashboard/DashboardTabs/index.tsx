@@ -1,13 +1,14 @@
-import { useAppDispatch, useAppSelector } from "@/Redux/Hooks";
-import React from "react";
-import { Col, TabContent, TabPane } from "reactstrap";
-import Dashboard from "./Dashboard";
 import { SettingMenu } from "@/Constants/Constants";
-import { useDispatch } from "react-redux";
+import { useAppDispatch, useAppSelector } from "@/Redux/Hooks";
 import { setUserDashboardSidebar } from "@/Redux/Layout/LayoutReducers";
 import Link from "next/link";
-import MyProperty from "../MyProperty";
+import { Col, TabContent, TabPane } from "reactstrap";
 import CreateProperty from "../CreateProperty";
+import MyFavorites from "../MyFavorites";
+import MyProperty from "../MyProperty";
+import Privacy from "../Privacy";
+import Profile from "../Profile";
+import Dashboard from "./Dashboard";
 
 const DashboardTabs = () => {
   const { activeTab } = useAppSelector((state) => state.layout);
@@ -25,7 +26,16 @@ const DashboardTabs = () => {
           <MyProperty />
         </TabPane>
         <TabPane tabId={"property"}>
-          <CreateProperty/>
+          <CreateProperty />
+        </TabPane>
+        <TabPane tabId={"profile"}>
+          <Profile />
+        </TabPane>
+        <TabPane tabId={"favorites"}>
+          <MyFavorites />
+        </TabPane>
+        <TabPane tabId={"privacy"}>
+          <Privacy />
         </TabPane>
       </TabContent>
     </Col>

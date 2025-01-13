@@ -1,5 +1,5 @@
-import DetailImages from "@/Components/Property/Common/PropertyDetail/DetailImages/DetailImages";
-import ShareModal from "@/Components/Property/Common/PropertyDetail/MainDetail/ShareModal";
+import DetailImages from "@/Components/CommonComponents/ProductDetail/DetailImages/DetailImages";
+import ShareModal from "@/Components/CommonComponents/ProductDetail/MainDetail/ShareModal";
 import { PropertyDetailType } from "@/Types/ProductType";
 import { FC, Fragment } from "react";
 import { Container } from "reactstrap";

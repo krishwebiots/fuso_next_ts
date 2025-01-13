@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from "@/Redux/Hooks";
 import { setSearchModal } from "@/Redux/Layout/LayoutReducers";
 import CloseBtn from "../CloseBtn";
 import { setAmenities, setBedsRooms, setPopular, setPriceStatus, setPropertyType, setSortBy, setSquareFeetStatus, setYearBuiltStatus } from "@/Redux/Reducers/FilterSlice";
-import FilterSidebar from "@/Components/Property/Common/GridView/Filter";
+import FilterSidebar from "@/Components/CommonComponents/GridView/Filter";
 import { SearchModalType } from "@/Types/CommonComponentsType";
 
 const SearchModal: FC<SearchModalType> = ({ type }) => {

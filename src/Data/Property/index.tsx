@@ -1,12 +1,12 @@
-import Amenities from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/Amenities";
-import FloorPlans from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/FloorPlans";
-import Location from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/Location";
-import OverViewSection from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/OverView";
-import OverView from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/OverView";
-import PropertyDescription from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/PropertyDescription";
-import ReviewProperty from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/Review";
-import ScheduleTour from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/ScheduleTour";
-import Video from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/Video";
+import Amenities from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/Amenities";
+import FloorPlans from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/FloorPlans";
+import Location from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/Location";
+import OverViewSection from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/OverView";
+import OverView from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/OverView";
+import PropertyDescription from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/PropertyDescription";
+import ReviewProperty from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/Review";
+import ScheduleTour from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/ScheduleTour";
+import Video from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/Video";
 import { AmenitiesTitle, FloorPlansTitle, LocationTitle, OverviewTitle, PropertyDescriptionTitle, ReviewsTitle, ScheduleTourTitle, VideoTitle } from "@/Constants/Constants";
 import { Autoplay, Navigation, Thumbs } from "swiper/modules";
 

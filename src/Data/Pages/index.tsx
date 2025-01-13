@@ -32,37 +32,37 @@ export const SideBarCategories = [
   {
     category: "Property",
     icon: "ri-home-4-line",
-    link: "blog-left-sidebar.html",
+    link: RouteList.Pages.Blog.BlogLeftSidebar,
     count: 4,
   },
   {
     category: "Vehicles",
     icon: "ri-car-line",
-    link: "blog-left-sidebar.html",
+    link: RouteList.Pages.Blog.BlogLeftSidebar,
     count: 5,
   },
   {
     category: "Job",
     icon: "ri-briefcase-line",
-    link: "blog-left-sidebar.html",
+    link: RouteList.Pages.Blog.BlogLeftSidebar,
     count: 2,
   },
   {
     category: "News",
     icon: "ri-megaphone-line",
-    link: "blog-left-sidebar.html",
+    link: RouteList.Pages.Blog.BlogLeftSidebar,
     count: 3,
   },
   {
     category: "Investment",
     icon: "ri-bar-chart-2-line",
-    link: "blog-left-sidebar.html",
+    link: RouteList.Pages.Blog.BlogLeftSidebar,
     count: 8,
   },
   {
     category: "Community",
     icon: "ri-team-line",
-    link: "blog-left-sidebar.html",
+    link: RouteList.Pages.Blog.BlogLeftSidebar,
     count: 1,
   },
 ];

@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Button, Col, Modal, ModalBody, ModalHeader, Row } from "reactstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CloseBtn from "../CloseBtn";
-import OverViewSection from "@/Components/Property/Common/PropertyDetail/DetailBody/DetailBodyItem/OverView";
+import OverViewSection from "@/Components/CommonComponents/ProductDetail/DetailBody/DetailBodyItem/OverView";
 
 const MoreDetailModal = () => {
   const { moredetailModal } = useAppSelector((state) => state.layout);

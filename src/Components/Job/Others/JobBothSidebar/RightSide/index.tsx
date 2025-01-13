@@ -1,4 +1,4 @@
-import RightJobsBox from "@/Components/Property/Common/PropertyDetail/DetailSidebar/RightJobsBox";
+import RightJobsBox from "@/Components/CommonComponents/ProductDetail/DetailSidebar/RightJobsBox";
 import Link from "next/link";
 import { Button, Col } from "reactstrap";
 

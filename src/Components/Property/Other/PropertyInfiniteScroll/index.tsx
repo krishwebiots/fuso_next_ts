@@ -1,7 +1,7 @@
 "use client";
-import GridView from "../../Common/GridView";
-import PropertyBreadCrumb from "../../Common/PropertyBreadCrumb";
-import TopFilter from "../../Common/TopFilter";
+import GridView from "@/Components/CommonComponents/GridView";
+import PropertyBreadCrumb from "../../../CommonComponents/PropertyBreadCrumb";
+import TopFilter from "../../../CommonComponents/TopFilter";
 
 const PropertyInfiniteScrollContainer = () => {
   return (

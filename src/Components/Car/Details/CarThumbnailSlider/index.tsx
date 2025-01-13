@@ -1,7 +1,7 @@
 "use client";
 import React, { Fragment } from "react";
 import CarBreadCrumb from "../../Common/CarBreadCrumb";
-import CarDetail from "@/Components/Property/Common/PropertyDetail/CarDetails";
+import CarDetail from "@/Components/CommonComponents/ProductDetail/CarDetails";
 import { Container } from "reactstrap";
 import BreadCrumbMainDetail from "../../Common/BreadCrumbMainDetail";
 

@@ -3,7 +3,6 @@ import { BlogSocialData } from "@/Data/Pages";
 import { AuthorDiscription } from "@/Data/Pages/Blog";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const BlogAuthor = () => {
   return (
@@ -22,7 +21,7 @@ const BlogAuthor = () => {
               </label>
             </div>
             <ul className='social-list'>
-              {BlogSocialData.slice(0,3).map((item, i) => {
+              {BlogSocialData.slice(0, 3).map((item, i) => {
                 return (
                   <li key={i}>
                     <Link href={item.link} target='_blank'>

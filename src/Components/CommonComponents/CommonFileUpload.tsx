@@ -1,51 +1,63 @@
-import { CardBody, Form } from "reactstrap";
-import { Dropzone,ExtFile,FileMosaic,FileMosaicProps,FullScreen,ImagePreview, } from "@dropzone-ui/react";
-import { useState } from "react";
-import CommonFileBody from "./CommonFileBody";
-import { CommonFileUploadProp } from "@/Types/CommonComponentsType";
+import { DragDrop, FileTitle, MorefileAdd } from "@/Constants/Constants";
+import React, { Fragment, useState } from "react";
+import Dropzone from "react-dropzone";
 
-const CommonFileUpload :React.FC<CommonFileUploadProp> = ({ maxFiles, multiple, body }) => {
-  const BASE_URL = "https://www.myserver.com";
-  const [extFiles, setExtFiles] = useState<ExtFile[]>([]);
-  const [imageSrc, setImageSrc] = useState<File | string | undefined>(undefined);
+const CommonFileUpload: React.FC<{ multiple?: boolean }> = ({ multiple }) => {
+  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
 
-  const updateFiles = (incomingFiles:ExtFile[]) => {
-    setExtFiles(incomingFiles)
-  }
-  const onDelete = (id:FileMosaicProps["id"]) => {
-    setExtFiles(extFiles.filter((x) => x.id !== id))
-  }
-  const handleSee = (imageSource: File | string | undefined) => setImageSrc(imageSource);
-  const handleAbort = (id:FileMosaicProps["id"]) => {
-    setExtFiles(
-      extFiles.map((ef) => {
-        if (ef.id === id) {
-          return { ...ef, uploadStatus: "aborted" };
-        } else return { ...ef };
-      })
-    );
+  const onDrop = (acceptedFiles: File[]) => {
+    setUploadedFiles((prevFiles) => [...prevFiles, ...acceptedFiles]);
   };
-  const handleCancel = (id:FileMosaicProps["id"]) => {
-    setExtFiles(
-      extFiles.map((ef) => {
-        if (ef.id === id) {
-          return { ...ef, uploadStatus: undefined };
-        } else return { ...ef };
-      })
-    );
+
+  const removeFile = (indexToRemove: number) => {
+    setUploadedFiles((prevFiles) => prevFiles.filter((_, index) => index !== indexToRemove));
   };
+
   return (
-    <CardBody>
-      <Form>
-        <Dropzone onChange={updateFiles} value={extFiles} maxFiles={maxFiles} multiple={multiple} uploadConfig={{ url: BASE_URL + "/file" }} header={false} footer={false} minHeight={body ? "180px" : "80px"} >
-          {extFiles.map((file) => (<FileMosaic {...file} key={file.id} onDelete={onDelete} onSee={handleSee} onAbort={handleAbort} onCancel={handleCancel} resultOnTooltip alwaysActive preview />))}
-          {extFiles.length===0 && <CommonFileBody/>}
+    <Fragment>
+      {uploadedFiles.length === 0 ? (
+        <Dropzone onDrop={onDrop}>
+          {({ getRootProps, getInputProps }) => (
+            <div {...getRootProps()} className='dropzone-container'>
+              <input {...getInputProps()} />
+              <p>{DragDrop}</p>
+            </div>
+          )}
         </Dropzone>
-        <FullScreen open={imageSrc !== undefined} onClose={() => setImageSrc(undefined)}>
-          <ImagePreview src={imageSrc} />
-        </FullScreen>
-      </Form>
-    </CardBody>
+      ) : (
+        <Fragment>
+          {multiple && (
+            <Dropzone onDrop={onDrop}>
+              {({ getRootProps, getInputProps }) => (
+                <div {...getRootProps()} className='add-more-files-zone'>
+                  <input {...getInputProps()} />
+                  <p>{MorefileAdd}</p>
+                </div>
+              )}
+            </Dropzone>
+          )}
+
+          <div className='uploaded-files'>
+            {uploadedFiles.map((file, index) => (
+              <div key={index} className='file-card'>
+                {file.type.startsWith("image/") ? (
+                  <img src={URL.createObjectURL(file)} alt={file.name} className='file-thumbnail' />
+                ) : (
+                  <div className='file-placeholder'>
+                    {file.name.split(".").pop()?.toUpperCase()} {FileTitle}
+                  </div>
+                )}
+                <p className='file-name'>{file.name}</p>
+                <p className='file-size'>{(file.size / 1024).toFixed(2)} KB</p>
+                <button onClick={() => removeFile(index)} className='remove-button' title='Remove file'>
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
+        </Fragment>
+      )}
+    </Fragment>
   );
 };
 

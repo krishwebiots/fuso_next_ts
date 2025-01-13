@@ -1,5 +1,5 @@
 "use client";
-import GridView from "@/Components/Property/Common/GridView";
+import GridView from "@/Components/CommonComponents/GridView";
 import { JobTitle } from "@/Constants/Constants";
 import { RouteList } from "@/utils/RouteList";
 import { Fragment } from "react";
